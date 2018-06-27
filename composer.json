@@ -1,0 +1,19 @@
+{
+    "name": "brunorthomaz/xss-evasion",
+    "authors": [
+        {
+            "name": "Bruno Thomaz",
+            "email": "brunorthomaz@gmail.com"
+        }
+    ],
+    "version": "0.1",
+    "minimum-stability": "dev",
+    "require": {
+    	"php": ">5.4"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"XSSEvasion\\": "src/"
+    	}
+    }
+}
