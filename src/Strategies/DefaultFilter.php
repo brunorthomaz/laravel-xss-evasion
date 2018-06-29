@@ -33,7 +33,7 @@ class DefaultFilter implements FilterInterface
     protected function filterTags(string $valueToFilter): string
     {
         preg_match_all(
-            TagsSupport::TAGS_TO_FILTER,
+            TagsSupport::getTagsPattern(),
             $valueToFilter,
             $pregResult
         );
@@ -56,10 +56,12 @@ class DefaultFilter implements FilterInterface
      */
     protected function filterListeners(string $valueToFilter): string
     {
-        return preg_replace(
-            ListenersSupport::LISTENERS_TO_FILTER,
+        preg_replace(
+            ListenersSupport::getListenersPattern(),
             '',
             $valueToFilter
         );
+
+        return $valueToFilter;
     }
 }

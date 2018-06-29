@@ -5,11 +5,9 @@ namespace XSSEvasion\Support;
 class ListenersSupport
 {
     /**
-     * @const array
+     * @const string
      */
-    const LISTENERS_TO_FILTER = [
-        'on.*=\".*\"(?=.*>)'
-    ];
+    const LISTENERS_TO_FILTER = 'on.*=\".*\"(?=.*>)';
 
     /**
      * @return string
