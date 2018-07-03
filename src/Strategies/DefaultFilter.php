@@ -56,12 +56,10 @@ class DefaultFilter implements FilterInterface
      */
     protected function filterListeners(string $valueToFilter): string
     {
-        preg_replace(
+        return preg_replace(
             ListenersSupport::getListenersPattern(),
             '',
             $valueToFilter
         );
-
-        return $valueToFilter;
     }
 }
